@@ -1,0 +1,91 @@
+
+.profile-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-container h2 {
+  margin-bottom: 25px;
+  color: #003e3f;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-form input {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.profile-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: hwb(171 14% 53%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-form button:hover {
+  background-color: #008c88;
+}
+.profile-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: #f5f5f5;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-container h2 {
+  margin-bottom: 25px;
+  color: #003e3f;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.profile-form input,
+.profile-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  width: 100%;
+}
+
+.profile-form textarea {
+  resize: vertical;
+}
+
+.profile-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: hwb(171 14% 53%);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.profile-form button:hover {
+  background-color: #008c88;
+}

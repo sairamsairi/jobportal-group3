@@ -1,0 +1,462 @@
+/* Styles moved to App.css */
+/* .home-page rules removed as they are now global or handled by body */
+/* .top-buttons rules removed as they are now global */
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.heroSection {
+  padding: 150px 0 80px 0;
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSection .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Title Area */
+.heroSection .title {
+  flex: 1;
+}
+
+.heroSection .title h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text-main);
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.heroSection .title p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 90%;
+}
+
+/* Hero Image */
+.heroSection .image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.heroSection .image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: var(--radius);
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Hero Stats Cards */
+.details {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+.details .card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: var(--transition);
+}
+
+.details .card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-md);
+  border-color: var(--secondary);
+}
+
+.details .icon {
+  background: rgba(26, 188, 156, 0.2);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details .icon svg {
+  font-size: 28px;
+  color: var(--secondary);
+}
+
+.details .content p:first-child {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.details .content p:last-child {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 5px;
+}
+
+/* =========================================
+   HOW IT WORKS SECTION
+   ========================================= */
+.how-it-works {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.how-it-works .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-it-works h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.how-it-works h3::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+.how-it-works .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.how-it-works .card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 40px 30px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.how-it-works .card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--secondary);
+}
+
+.how-it-works .icon {
+  background: rgba(255, 255, 255, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.how-it-works .card:hover .icon {
+  background: var(--secondary);
+  transform: rotate(10deg);
+}
+
+.how-it-works .icon svg {
+  font-size: 32px;
+  color: var(--text-main);
+}
+
+.how-it-works h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.how-it-works p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding: 80px 20px;
+}
+
+.companies {
+  padding: 80px 20px;
+  margin-bottom: 50px;
+}
+
+.companies h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.companies .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.companies .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.companies .card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: var(--transition);
+}
+
+.companies .card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: var(--secondary);
+}
+
+.companies .content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.companies .icon {
+  font-size: 40px;
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.companies .text p:first-child {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 5px;
+}
+
+.companies .text p:last-child {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.companies .card button {
+  width: 100%;
+  padding: 12px;
+  background: rgba(26, 188, 156, 0.1);
+  color: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.companies .card:hover button {
+  background: var(--secondary);
+  color: var(--white);
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 1024px) {
+  .heroSection .title h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .heroSection .title p {
+    margin: 0 auto;
+  }
+
+  .heroSection .image {
+    margin-top: 40px;
+  }
+
+  .top-buttons {
+    top: 10px;
+    right: 10px;
+  }
+
+  .top-buttons button {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection .title h1 {
+    font-size: 2.2rem;
+  }
+
+  .details {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   POPULAR CATEGORIES – MATCH HOME CARD STYLE
+   ========================================= */
+
+.popular-categories {
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--text-main);
+}
+
+.popular-categories .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.popular-categories h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: var(--text-main);
+  position: relative;
+  display: inline-block;
+}
+
+.popular-categories h3::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+/* GRID SAME AS OTHERS */
+.popular-categories .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARD SAME STYLE AS OTHER HOME CARDS */
+.popular-categories .card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  backdrop-filter: blur(10px);
+  padding: 35px 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.popular-categories .card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--secondary);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ICON SAME STYLE */
+.popular-categories .icon {
+  background: rgba(255, 255, 255, 0.1);
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.popular-categories .card:hover .icon {
+  background: var(--secondary);
+  transform: rotate(10deg);
+}
+
+.popular-categories .icon svg {
+  font-size: 32px;
+  color: var(--text-main);
+}
+
+/* TEXT SAME STYLE */
+.popular-categories h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.popular-categories p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}

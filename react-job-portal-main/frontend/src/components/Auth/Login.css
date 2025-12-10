@@ -1,0 +1,156 @@
+/* Full Page Layout */
+.login-page {
+  display: flex;
+  height: 100vh;
+  /* background removed to use global var(--bg-gradient) */
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glass Card */
+.login-card {
+  width: 400px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: fadeIn 0.9s ease;
+}
+
+/* Logo Section */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.logo h2 {
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.logo p {
+  color: #eaeaea;
+  font-size: 14px;
+}
+
+/* Input Fields */
+.input-box {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.input-box .icon {
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.input-box input,
+.input-box select {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  /* color: white; */
+  color: #1b2b34;
+  font-size: 15px;
+}
+
+/* .drop{
+  background: #ccf8e3;    
+  color: #1b2b34;  
+} */
+
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #fff;
+  color: #2c3e50;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #f1f1f1;
+  transform: scale(1.02);
+}
+
+/* Register Link */
+.register-text {
+  margin-top: 15px;
+  text-align: center;
+  color: #fff;
+}
+
+.register-text a {
+  color: #ffd700;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Side Banner Image */
+.login-side-img img {
+  width: 500px;
+  animation: slideIn 1s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-page {
+    flex-direction: column;
+  }
+
+  .login-side-img img {
+    width: 300px;
+    margin-top: 20px;
+  }
+}
+
+/* Top-right buttons */
+/* .top-buttons styles removed - using global App.css */
