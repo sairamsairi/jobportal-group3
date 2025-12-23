@@ -45,7 +45,12 @@ const Navbar = () => {
       {/* After Login */}
       {isAuthorized && (
         <>
-          <Link to="/job/profile" className="nav-btn">PROFILE</Link>
+          <Link
+            to={user && user.role === "Job Seeker" ? "/profile/jobseeker" : "/profile/employer"}
+            className="nav-btn"
+          >
+            PROFILE
+          </Link>
           <Link to="/job/getall" className="nav-btn">ALL JOBS</Link>
           <Link to="/applications/me" className="nav-btn">
             {user && user.role === "Job Seeker" ? "APPLICATIONS" : "MY APPLICATIONS"}

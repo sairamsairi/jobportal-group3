@@ -1,0 +1,365 @@
+.post-job-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, hwb(171 14% 53%));
+    padding: 60px 20px;
+}
+
+.post-job-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.25);
+    animation: fadeInUp 0.6s ease-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.post-job-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.post-job-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a252f;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.post-job-header p {
+    color: #34495e;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.post-job-form {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.form-section {
+    background: rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-section:hover {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-section h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #16a085;
+    display: inline-block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #16a085;
+    box-shadow: 0 0 0 3px rgba(22, 160, 133, 0.1);
+    transform: translateY(-1px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.char-count {
+    display: block;
+    text-align: right;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+/* Checkbox Styling */
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #34495e;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #16a085;
+}
+
+.checkbox-label span {
+    font-size: 1rem;
+}
+
+/* Skills & Benefits Tags */
+.input-with-button {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-with-button input {
+    flex: 1;
+}
+
+.btn-add-inline {
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(22, 160, 133, 0.3);
+}
+
+.btn-add-inline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(22, 160, 133, 0.4);
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    animation: fadeIn 0.3s ease;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
+}
+
+.benefit-tag {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    box-shadow: 0 2px 8px rgba(46, 204, 113, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.tag button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: all 0.2s ease;
+}
+
+.tag button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: rotate(90deg);
+}
+
+/* Submit Button */
+.btn-submit {
+    background: linear-gradient(135deg, #2c3e50, #16a085);
+    color: white;
+    border: none;
+    padding: 16px 40px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(44, 62, 80, 0.3);
+    margin-top: 20px;
+    width: 100%;
+}
+
+.btn-submit:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(44, 62, 80, 0.4);
+}
+
+.btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Salary Type Conditional Styling */
+.form-section .form-group:has(select[value="default"])+.form-group {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-job-container {
+        padding: 25px;
+    }
+
+    .post-job-header h1 {
+        font-size: 2rem;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .input-with-button {
+        flex-direction: column;
+    }
+
+    .btn-add-inline {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-job-page {
+        padding: 30px 15px;
+    }
+
+    .post-job-container {
+        padding: 20px;
+    }
+
+    .post-job-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+}
+
+/* Additional Enhancements */
+.form-group input[type="date"] {
+    cursor: pointer;
+}
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+/* Placeholder Styling */
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.form-group select::placeholder {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+/* Focus Ring for Accessibility */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible,
+.form-group select:focus-visible {
+    outline: 2px solid #16a085;
+    outline-offset: 2px;
+}
+
+/* Success State Animation */
+@keyframes successPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.btn-submit.success {
+    animation: successPulse 0.5s ease;
+}

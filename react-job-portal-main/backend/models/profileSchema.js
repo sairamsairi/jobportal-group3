@@ -1,4 +1,3 @@
-
 // models/Profile.js
 import mongoose from "mongoose";
 
@@ -6,9 +5,17 @@ const profileSchema = new mongoose.Schema(
   {
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User", // Assuming you have a User model
+      ref: "User",
       required: true,
+      unique: true,
     },
+    userRole: {
+      type: String,
+      required: true,
+      enum: ["Job Seeker", "Employer"],
+    },
+
+    // Common fields for both roles
     fullName: {
       type: String,
       required: true,
@@ -26,6 +33,11 @@ const profileSchema = new mongoose.Schema(
     location: {
       type: String,
     },
+    about: {
+      type: String,
+    },
+
+    // Job Seeker specific fields
     education: [
       {
         institution: { type: String },
@@ -45,9 +57,42 @@ const profileSchema = new mongoose.Schema(
       },
     ],
     skills: [String],
-    cvUrl: { type: String }, // Can store file link from cloud storage
+    resume: {
+      public_id: { type: String },
+      url: { type: String },
+    },
     portfolioLinks: [String],
-    about: { type: String },
+
+    // Employer specific fields
+    companyName: {
+      type: String,
+    },
+    companyWebsite: {
+      type: String,
+    },
+    companySize: {
+      type: String,
+      enum: ["1-10", "11-50", "51-200", "201-500", "501-1000", "1000+", ""],
+    },
+    industry: {
+      type: String,
+    },
+    companyDescription: {
+      type: String,
+    },
+    companyLogo: {
+      public_id: { type: String },
+      url: { type: String },
+    },
+    contactPerson: {
+      type: String,
+    },
+    contactEmail: {
+      type: String,
+    },
+    contactPhone: {
+      type: String,
+    },
   },
   { timestamps: true }
 );

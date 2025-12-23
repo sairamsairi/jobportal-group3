@@ -17,6 +17,7 @@ export const postJob = catchAsyncErrors(async (req, res, next) => {
       new ErrorHandler("Job Seeker not allowed to access this resource.", 400)
     );
   }
+
   const {
     title,
     description,
@@ -27,6 +28,16 @@ export const postJob = catchAsyncErrors(async (req, res, next) => {
     fixedSalary,
     salaryFrom,
     salaryTo,
+    salaryCurrency,
+    jobType,
+    experienceLevel,
+    requiredSkills,
+    responsibilities,
+    requirements,
+    benefits,
+    applicationDeadline,
+    isRemote,
+    numberOfPositions,
   } = req.body;
 
   if (!title || !description || !category || !country || !city || !location) {
@@ -47,6 +58,7 @@ export const postJob = catchAsyncErrors(async (req, res, next) => {
       new ErrorHandler("Cannot Enter Fixed and Ranged Salary together.", 400)
     );
   }
+
   const postedBy = req.user._id;
   const job = await Job.create({
     title,
@@ -58,8 +70,19 @@ export const postJob = catchAsyncErrors(async (req, res, next) => {
     fixedSalary,
     salaryFrom,
     salaryTo,
+    salaryCurrency,
+    jobType,
+    experienceLevel,
+    requiredSkills,
+    responsibilities,
+    requirements,
+    benefits,
+    applicationDeadline,
+    isRemote,
+    numberOfPositions,
     postedBy,
   });
+
   res.status(200).json({
     success: true,
     message: "Job Posted Successfully!",
